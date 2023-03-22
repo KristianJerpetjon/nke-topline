@@ -4,6 +4,8 @@ import datetime
 import time
 import binascii
 import numpy as np
+from topline import ToplineDecoder
+
 #ms = time.time_ns() // 1_000_000
 ser = serial.Serial(
     port="/dev/ttyUSB3",
@@ -37,6 +39,16 @@ def hex_to_float16(a_hex_str):
     a_int16 = struct.unpack('>H', h_hex_byte)  # sometimes you need h_hex_byte[::-1] because of big/little endian
     a_np_int16 = np.int16(a_int16)
     return a_np_int16.view(np.float16)
+
+tp=ToplineDecoder()
+with open("dump.bin","wb") as file:
+    while True:
+        c=ser.read()
+        if len(c) == 0:
+            break
+        tp.recieve(c)
+        file.write(c)
+exit
 
 with open("dump.bin","wb") as file:
     while True:
