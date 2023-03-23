@@ -189,10 +189,18 @@ class ToplineDecoder:
             #process as 6 bit signed
             if bytestring[1] == '0x4':
                 #before=(before & 0x3F) | 0xC0
-                angle=(angle&0x4F) | 0xC0 #insert two bits to make signed 8 bit
+                angle=(angle&0x3F) | 0xC0 #insert two bits to make signed 8 bit
                 res=angle.to_bytes(1,"big",signed=False)
                 angle=int.from_bytes(res,"big",signed=True)
-            angle=(angle*100)/256
+                angle
+                #angle=int((angle/3.141592))+1#(100/(4*64))))
+
+            ##close enough might need some fixing with rounding off 
+            ##the -1 makes no sense but it works ish
+            angle=int(angle/3.141592)#(100/(4*64))))
+            if angle < 0 :
+                angle+=1
+
             print("rudder angle",angle)
         if cmd == '0x20':
                 #No idea currently
