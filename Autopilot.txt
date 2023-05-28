@@ -1,0 +1,210 @@
+Autopilot on ref 29deg
+Compass mode
+cmd   03 fc 4f
+code  01 00 00
+cmd   03 fc 4f
+code  01 00 00
+cmd   03 f4 4f
+code  11 00 1d
+cmd   03 fc 4f
+code  11 00 1d
+cmd   03 fc 4e
+code  10 00 60
+cmd   03 fc 4e
+code  10 00 60
+cmd   03 f4 4e
+code  10 00 61
+cmd   03 fc 4e
+code  10 00 61
+cmd   03 fc 4e
+code  10 00 61
+cmd   03 fc 4e
+code  10 00 61
+
+-1 +2 (1c - 1d -1e)
+cmd   03 f4 4f
+code  11 00 1c
+cmd   03 fc 4f
+code  11 00 1c
+cmd   03 f4 4f
+code  11 00 1d
+cmd   03 fc 4f
+code  11 00 1d
+cmd   03 f4 4f
+code  11 00 1e
+cmd   03 fc 4f
+code  11 00 1e
+
+#to ref 31
+cmd   03 f4 4f
+code  11 00 1f
+cmd   03 fc 4f
+code  11 00 1f
+
+#to ref 32 (1100 degree seems to be the deal) need to check when turned 180 deg
+cmd   03 f4 4f
+code  11 00 20
+cmd   03 fc 4f
+code  11 00 20
+
+-10 
+cmd   03 f4 4f
+code  11 00 16
+cmd   03 fc 4f
+code  11 00 16
++10
+cmd   03 f4 4f
+code  11 00 20
+cmd   03 fc 4f
+code  11 00 20
+
+STOP 
+cmd   03 fc 4e
+code  10 00 61
+cmd   03 fc 4e
+code  10 00 61
+cmd   03 f4 4e
+code  10 00 60
+cmd   03 fc 4e
+code  10 00 60
+
+
+
+
+Autopilot Ref Aparent wind 33-51 deg
+
+Start (REF is 55)
+cmd   03 fc 4f
+code  01 00 01
+cmd   03 fc 4f
+code  01 00 01
+cmd   03 f4 4f
+code  11 01 31
+cmd   03 fc 4f
+code  11 01 31
+cmd   03 fc 4e
+code  10 00 60
+cmd   03 fc 4e
+code  10 00 60
+cmd   03 f4 4e
+code  10 00 61
+cmd   03 fc 4e
+code  10 00 61
+cmd   03 fc 4e
+code  10 00 61
+cmd   03 fc 4e
+code  10 00 61
+
+STOP(APARENT)
+cmd   03 fc 4e
+code  10 00 61
+cmd   03 fc 4e
+code  10 00 61
+cmd   03 f4 4e
+code  10 00 60
+cmd   03 fc 4e
+code  10 00 60
+
+
+Mode changes
+
+Mode rudder
+cmd   03 fc 4e
+code  10 00 60
+cmd   03 fc 4e
+code  10 00 60
+cmd   03 f4 4f
+code  01 00 02
+cmd   03 fc 4f
+code  01 00 02
+
+
+Mode True
+cmd   03 fc 4e
+code  10 00 60
+cmd   03 fc 4e
+code  10 00 60
+cmd   03 f4 4f
+code  01 00 06
+cmd   03 fc 4f
+code  01 00 06
+
+Mode Aparent
+cmd   03 fc 4e
+code  10 00 60
+cmd   03 fc 4e
+code  10 00 60
+cmd   03 f4 4f
+code  01 00 01
+cmd   03 fc 4f
+code  01 00 01
+
+
+Mode compass
+cmd   03 fc 4e
+code  10 00 60
+cmd   03 fc 4e
+code  10 00 60
+cmd   03 f4 4f
+code  01 00 00
+cmd   03 fc 4f
+code  01 00 00
+
+Gain change from 3 to 1
+cmd   03 fc 4f
+code  05 00 03
+cmd   03 fc 4f
+code  05 00 03
+cmd   03 f4 4f
+code  05 00 01
+cmd   03 fc 4f
+code  05 00 01
+
+Start rudder
+cmd   03 fc 4f
+code  01 00 02
+cmd   03 fc 4f
+code  01 00 02
+cmd   03 f4 4f
+code  11 01 60
+cmd   03 fc 4f
+code  11 01 60
+cmd   03 fc 4e
+code  10 00 60
+cmd   03 fc 4e
+code  10 00 60
+cmd   03 f4 4e
+code  10 00 61
+cmd   03 fc 4e
+code  10 00 61
+cmd   03 fc 4e
+code  10 00 61
+cmd   03 fc 4e
+code  10 00 61
+
++1 rudder (from -8 to -7)
+cmd   03 f4 4f
+code  11 01 61
+cmd   03 fc 4f
+code  11 01 61
+
++1 rudder (from -7 to -6)
+cmd   03 f4 4f
+code  11 01 62
+cmd   03 fc 4f
+code  11 01 62
+
++10 rudder (ang 4)
+cmd   03 f4 4f
+code  11 00 04
+cmd   03 fc 4f
+code  11 00 04
+
++1 rudder (ang 5)
+code  11 00 05
+cmd   03 fc 4f
+code  11 00 05
+
+#sends the desired angle directly to computer..
+#Cant select GPS probably because of missing waypoint
+
